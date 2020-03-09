@@ -1,0 +1,20 @@
+﻿@model IEnumerable<MyRipBlog.Models.Tag>
+@{
+    ViewData["Title"] = "Tags";
+}
+
+<h3>Tags</h3>
+
+<table border="1">
+    <tr>
+        <td><b>ID</b></td>
+        <td><b>Value</b></td>
+    </tr>
+    @foreach(var tag in Model)
+    {
+        <tr>
+            <td>@tag.Id</td>
+            <td>@tag.Value</td>
+        </tr>
+    }
+</table>

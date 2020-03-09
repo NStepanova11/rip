@@ -1,0 +1,24 @@
+﻿@model IEnumerable<MyRipBlog.Models.User>
+@{
+    ViewData["Title"] = "Users";
+}
+
+<h3>Users</h3>
+
+<table border="1">
+    <tr>
+        <td><b>ID</b></td>
+        <td><b>Username</b></td>
+        <td><b>Email</b></td>
+        <td><b>Password</b></td>
+    </tr>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.Id</td>
+            <td>@user.Username</td>
+            <td>@user.Email</td>
+            <td>@user.Password</td>
+        </tr>
+    }
+</table>
